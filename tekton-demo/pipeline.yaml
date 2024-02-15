@@ -7,7 +7,7 @@ spec:
     - name: IMAGE
       description: Image description
       type: string
-      default: "docker.io/bestomathew/nodejs-app"
+      default: "docker.io/<username>/<image>"
     - name: TAG
       description: Preferred tag
       default: latest
@@ -22,7 +22,7 @@ spec:
           workspace: linked-workspace
       params:
         - name: url
-          value: https://github.com/mbestom/nodejs-app
+          value: <git-url>
         - name: subdirectory
           value: ""
         - name: deleteExisting
@@ -50,7 +50,7 @@ spec:
       params:
         - name: script
           value: |
-            kubectl apply --filename https://raw.githubusercontent.com/mbestom/nodejs-app/main/manifest/deploy.yaml
+            kubectl apply --filename <url>/deploy.yaml
       workspaces:
         - name: manifest-dir
           workspace: linked-workspace

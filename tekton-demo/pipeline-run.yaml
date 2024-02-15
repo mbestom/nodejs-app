@@ -8,7 +8,7 @@ spec:
     name: nodejs-pipeline
   params:
     - name: IMAGE
-      value: bestomathew/nodejs-app
+      value: <image name>
     - name: TAG
       value: latest
   workspaces:
